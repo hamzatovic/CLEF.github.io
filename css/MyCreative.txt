@@ -1,0 +1,19 @@
+SELECT  [Id]
+      ,[AppCode]
+      ,[ManagerCode]
+      ,UPPER([ModelCode]) [ModelCode]
+      ,[CreatedOn]
+      ,[ModifiedOn]
+      ,[CreatedBy]
+      ,[ModifiedBy]
+      ,[ModelCATCode]
+  FROM [CATBI_DW].[dbo].[M_ModelsCAT]
+  
+  
+  UPPER(TRIM(
+  
+  Data flow changed : 
+  -Load Revenues Table where ApplicationCode is in (« MANUEL _ PROV » ,« MANUEL _EXTRA » ,« MANUEL _FILIALE »)
+  -Load Log Table  where ApplicationCode is in (« MANUEL _ PROV » ,« MANUEL _EXTRA » ,« MANUEL _FILIALE »)
+  -Update ODS_Revenues   where ApplicationCode is in (« MANUEL _ PROV » ,« MANUEL _EXTRA » ,« MANUEL _FILIALE »)
+  
